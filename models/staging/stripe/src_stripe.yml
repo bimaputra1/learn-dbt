@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: A stripe data sources.
+    database: dbt-tutorial
+    tables:
+      - name: payment
+        description: Raw customers data.
+        columns:
+          - name: id
+            desriptions: Primary key for payments
+            tests:
+              - unique
